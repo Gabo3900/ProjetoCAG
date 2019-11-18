@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="AdministradorWindow" Height="205" Width="265">
+        Title="Administrador" Height="200" Width="270">
     <Grid>
         <Button Content="Cadastrar Curso" HorizontalAlignment="Left" Margin="59,5,0,0" VerticalAlignment="Top" Width="129"/>
         <Button Content="Cadastrar Turma" HorizontalAlignment="Left" Margin="59,35,0,0" VerticalAlignment="Top" Width="129"/>
