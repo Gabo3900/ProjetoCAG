@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="Login" Height="140" Width="214.5">
+        Title="Login" Height="140" Width="220">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Usuário" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
         <TextBox Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="69,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <PasswordBox Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="69,38,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Click="btnOk" Content="Entrar" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Click="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="114,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Entrar" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="114,75,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
