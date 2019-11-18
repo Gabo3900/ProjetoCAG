@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="CadastrarAlunoWindow" Height="250" Width="400">
+        Title="CadastrarAlunoWindow" Height="250" Width="423.333">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Usuário" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="170,10,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
         <TextBox Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
         <PasswordBox Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="170,31,0,0" VerticalAlignment="Top" Width="160"/>
-        <Image Name="image" HorizontalAlignment="Left" Height="120" Margin="262,84,0,0" VerticalAlignment="Top" Width="120"/>
         <ListBox Name="list" HorizontalAlignment="Left" Height="120" Margin="10,84,0,0" VerticalAlignment="Top" Width="240" SelectionChanged="List_SelectionChanged"/>
         <Button Click="InserirClick" Content="Inserir" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Click="InsertClick" Content="Listar" HorizontalAlignment="Left" Margin="90,59,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Click="FotoClick" Content="Foto" HorizontalAlignment="Left" Margin="170,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click="InsertClick" Content="Listar" HorizontalAlignment="Left" Margin="330,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Click="FotoClick" Content="Foto" HorizontalAlignment="Left" Margin="90,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="170,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="250,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox HorizontalAlignment="Left" Height="120" Margin="277,84,0,0" VerticalAlignment="Top" Width="111"/>
     </Grid>
 </Window>

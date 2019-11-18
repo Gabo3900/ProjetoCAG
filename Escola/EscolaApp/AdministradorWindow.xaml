@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="AdministradorWindow" Height="231" Width="261">
+        Title="AdministradorWindow" Height="205" Width="265">
     <Grid>
         <Button Content="Cadastrar Curso" HorizontalAlignment="Left" Margin="59,5,0,0" VerticalAlignment="Top" Width="129"/>
         <Button Content="Cadastrar Turma" HorizontalAlignment="Left" Margin="59,35,0,0" VerticalAlignment="Top" Width="129"/>
         <Button Content="Cadastrar Aluno" HorizontalAlignment="Left" Margin="59,65,0,0" VerticalAlignment="Top" Width="129"/>
         <Button Content="Cadastrar Matéria" HorizontalAlignment="Left" Margin="59,95,0,0" VerticalAlignment="Top" Width="128"/>
-        <Button Content="Cadastrar Matriz" HorizontalAlignment="Left" Margin="59,125,0,0" VerticalAlignment="Top" Width="128"/>
-        <Button Content="Sair" HorizontalAlignment="Left" Margin="86,170,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Sair" HorizontalAlignment="Left" Margin="88,139,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
