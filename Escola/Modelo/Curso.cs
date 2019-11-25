@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace EscolaApp
+namespace Modelo
 {
-    class Curso
+    public class Curso
     {
         private int id;
         private string nome;
-        public int Id {
+        public int Id
+        {
             get { return id; }
         }
-        public string Nome {
+        public string Nome
+        {
             get { return nome; }
         }
 

@@ -12,7 +12,9 @@ namespace EscolaApp
         public int Id {
             get { return id; }
         }
-        public int CursoId { get { return cursoId; } }
+        public int CursoId {
+            get { return cursoId; }
+        }
         public Turma (int i, int c)
         {
             id = i;

@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Disciplina.cs" />
     <Compile Include="Turma.cs" />
     <Page Include="AdministradorWindow.xaml">
       <SubType>Designer</SubType>
