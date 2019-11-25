@@ -18,9 +18,9 @@ namespace EscolaApp
     /// <summary>
     /// Interação lógica para MainWindow.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
         }
