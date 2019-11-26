@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Modelo
 {
-    class Turma
+    public class Turma
     {
         private int id, cursoId;
         public int Id

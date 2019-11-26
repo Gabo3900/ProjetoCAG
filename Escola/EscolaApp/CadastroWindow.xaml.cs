@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Modelo;
 
 namespace EscolaApp
 {
@@ -19,9 +20,18 @@ namespace EscolaApp
     /// </summary>
     public partial class CadastroWindow : Window
     {
+        private Administrador a;
+
         public CadastroWindow()
         {
             InitializeComponent();
+        }
+
+        private void CadastroClick(object sender, RoutedEventArgs e)
+        {
+            string n = txtNome.Text;
+            string em = txtEmail.Text;
+            a = new Administrador(n, "123", em);
         }
     }
 }

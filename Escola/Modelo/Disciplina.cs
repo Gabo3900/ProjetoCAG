@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Modelo
 {
-    class Disciplina
+    public class Disciplina
     {
         private int id;
         private string nome;

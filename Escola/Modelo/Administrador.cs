@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Modelo
 {
-    class Administrador
+    public class Administrador
     {
         private string nome;
         private string senha;
