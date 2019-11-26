@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace EscolaApp
 {
     /// <summary>
-    /// Lógica interna para MainWindow.xaml
+    /// Lógica interna para CadastroWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CadastroWindow : Window
     {
-        public MainWindow()
+        public CadastroWindow()
         {
             InitializeComponent();
-        }
-
-        private void UsuariosClick(object sender, RoutedEventArgs e)
-        {
-            LoginWindow w = new LoginWindow();
-            w.ShowDialog();
         }
     }
 }
