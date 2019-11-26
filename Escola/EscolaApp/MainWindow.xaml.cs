@@ -23,5 +23,11 @@ namespace EscolaApp
         {
             InitializeComponent();
         }
+
+        private void UsuariosClick(object sender, RoutedEventArgs e)
+        {
+            LoginWindow w = new LoginWindow();
+            w.ShowDialog();
+        }
     }
 }
