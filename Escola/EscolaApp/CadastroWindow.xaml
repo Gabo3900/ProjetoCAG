@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="CadastroWindow" Height="250" Width="400">
+        Title="CadastroWindow" Height="196.667" Width="204">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Nome" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="48,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,38,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="10,68,0,0" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="48,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Cadastrar-se" HorizontalAlignment="Left" Margin="48,130,0,0" VerticalAlignment="Top" Width="75"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="48,38,0,0" VerticalAlignment="Top" Width="120" Height="25"/>
     </Grid>
 </Window>
