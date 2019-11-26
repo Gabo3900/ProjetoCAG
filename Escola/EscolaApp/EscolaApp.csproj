@@ -55,8 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Disciplina.cs" />
-    <Compile Include="Turma.cs" />
     <Page Include="AdministradorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,7 +105,6 @@
     <Compile Include="CadastrarTurmaWindow.xaml.cs">
       <DependentUpon>CadastrarTurmaWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Curso.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
