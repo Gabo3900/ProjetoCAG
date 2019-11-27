@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="CadastroWindow" Height="196.667" Width="204"
-        Background="#FF00FF" Foreground="White">
+        Title="CadastroWindow" Height="196.667" Width="204">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Nome" VerticalAlignment="Top"/>
         <TextBox Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="48,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

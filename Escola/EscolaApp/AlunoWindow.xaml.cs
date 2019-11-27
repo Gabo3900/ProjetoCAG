@@ -28,5 +28,11 @@ namespace EscolaApp
         {
 
         }
+
+        private void Perfil_Button(object sender, RoutedEventArgs e)
+        {
+            PerfilWindow w = new PerfilWindow();
+            w.Show();
+        }
     }
 }

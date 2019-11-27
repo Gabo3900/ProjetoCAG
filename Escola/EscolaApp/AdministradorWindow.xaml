@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="Administrador" Height="200" Width="270">
+        Title="Administrador" Height="200" Width="270" Closing="Exit">
     <Grid>
-        <Button Content="Cadastrar Curso" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="129"/>
-        <Button Content="Cadastrar Turma" HorizontalAlignment="Left" Margin="60,40,0,0" VerticalAlignment="Top" Width="129"/>
-        <Button Content="Cadastrar Aluno" HorizontalAlignment="Left" Margin="60,70,0,0" VerticalAlignment="Top" Width="129"/>
-        <Button Content="Cadastrar Matéria" HorizontalAlignment="Left" Margin="60,100,0,0" VerticalAlignment="Top" Width="128"/>
+        <Button Content="Cadastrar Curso" HorizontalAlignment="Left" Margin="60,10,0,0" VerticalAlignment="Top" Width="129" Click="Curso_Click"/>
+        <Button Content="Cadastrar Turma" HorizontalAlignment="Left" Margin="60,40,0,0" VerticalAlignment="Top" Width="129" Click="Turma_Click"/>
+        <Button Content="Cadastrar Aluno" HorizontalAlignment="Left" Margin="60,70,0,0" VerticalAlignment="Top" Width="129" Click="Aluno_Click"/>
+        <Button Content="Cadastrar Matéria" HorizontalAlignment="Left" Margin="60,100,0,0" VerticalAlignment="Top" Width="128" Click="Materia_Click"/>
         <Button Content="Sair" HorizontalAlignment="Left" Margin="90,140,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
