@@ -53,5 +53,10 @@ namespace EscolaApp
             MainWindow w = new MainWindow();
             w.Show();
         }
+
+        private void Sair_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
