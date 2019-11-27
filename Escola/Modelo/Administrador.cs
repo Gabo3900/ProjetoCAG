@@ -15,5 +15,9 @@ namespace Modelo
             senha = s;
             email = e;
         }
+        public override string ToString()
+        {
+            return $"{nome} - {email}";
+        }
     }
 }
