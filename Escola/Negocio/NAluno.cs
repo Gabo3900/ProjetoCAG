@@ -20,29 +20,40 @@ namespace Negocio
             alunos = p.Abrir();
             return alunos.Where(x => x.Nome.StartsWith(s)).ToList();
         }
-        public void Inserir(Aluno c)
+        public void Inserir(Aluno a)
         {
             alunos = p.Abrir();
             int id = 1;
             if (alunos.Count > 0) id = alunos.Max(x => x.Id) + 1;
-            c.Id = id;
-            alunos.Add(c);
+            a.Id = id;
+            alunos.Add(a);
             p.Salvar(alunos);
         }
-        public void Atualizar(Aluno c)
+        public void Atualizar(Aluno a)
         {
             alunos = p.Abrir();
-            Aluno r = alunos.Where(x => x.Id == c.Id).Single();
+            Aluno r = alunos.Where(x => x.Id == a.Id).Single();
             alunos.Remove(r);
-            alunos.Add(c);
+            alunos.Add(a);
             p.Salvar(alunos);
         }
-        public void Excluir(Aluno c)
+        public void Excluir(Aluno a)
         {
             alunos = p.Abrir();
-            Aluno r = alunos.Where(x => x.Id == c.Id).Single();
+            Aluno r = alunos.Where(x => x.Id == a.Id).Single();
             alunos.Remove(r);
             p.Salvar(alunos);
+        }
+        public List<Aluno> ColegasDeClasse(Aluno a)
+        {
+            alunos = p.Abrir();
+            return alunos.Where(x => x.TurmaId == a.TurmaId).ToList();
+        }
+        public List<Aluno> Displinas(Aluno a)
+        {
+            alunos = p.Abrir();
+            Curso c = alunos.Where(x )
+            return alunos
         }
     }
 }
