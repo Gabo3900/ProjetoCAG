@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace Persistencia
 {
-    class PMatrizCurricular
+    public class PMatrizCurricular
     {
         private string arquivo = "matrizCurriculares.xml";
         public List<MatrizCurricular> Abrir()
