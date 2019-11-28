@@ -8,7 +8,7 @@ namespace Negocio
     public class NDisciplina
     {
         private List<Disciplina> discs;
-        private PDisciplina p;
+        private PDisciplina p = new PDisciplina();
         public List<Disciplina> Listar()
         {
             return p.Abrir();
