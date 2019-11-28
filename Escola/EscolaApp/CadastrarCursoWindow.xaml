@@ -5,19 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="CadastrarCursoWindow" Height="200" Width="370">
+        Title="CadastrarCursoWindow" Height="234.734" Width="370">
     <Grid>
-        <Menu>
-            <MenuItem Header="Cadastro">
-                <MenuItem Header="Inserir"></MenuItem>
-                <MenuItem Header="Listar"></MenuItem>
-                <MenuItem Header="Atualizar"></MenuItem>
-                <MenuItem Header="Excluir"></MenuItem>
-            </MenuItem>
-        </Menu>
-        <TextBlock HorizontalAlignment="Left" Margin="105,20,0,0" TextWrapping="Wrap" Text="Curso" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="141,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ListBox HorizontalAlignment="Left" Height="100" Margin="10,48,0,0" VerticalAlignment="Top" Width="342"/>
+        <TextBlock HorizontalAlignment="Left" Margin="105,10,0,0" TextWrapping="Wrap" Text="Curso" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="141,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Inserir" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Listar" HorizontalAlignment="Left" Margin="90,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="170,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="250,59,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox HorizontalAlignment="Left" Height="100" Margin="10,94,0,0" VerticalAlignment="Top" Width="342"/>
 
     </Grid>
 </Window>

@@ -16,9 +16,9 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Usuário" VerticalAlignment="Top" Height="16" Width="40"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Senha" VerticalAlignment="Top" Grid.Row="1" Height="16" Width="32"/>
-        <TextBox Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="10,6,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Usuário" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Senha" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBox Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="10,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
         <PasswordBox Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="10,7,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" Grid.Column="1"/>
         <Button Content="Entrar" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="75" Grid.Row="2" Height="20" Grid.ColumnSpan="2" Click="Button_Entrar"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="41,7,0,0" VerticalAlignment="Top" Width="75" Grid.Row="2" Grid.Column="1" Height="20"/>
