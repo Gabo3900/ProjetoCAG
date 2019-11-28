@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace Persistencia
 {
-    class PAluno
+    public class PAluno
     {
         private string arquivo = "alunos.xml";
         public List<Aluno> Abrir()
