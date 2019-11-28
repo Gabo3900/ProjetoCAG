@@ -6,7 +6,7 @@ namespace Modelo
 {
     public class Disciplina
     {
-        private int id;
-        private string nome;
+        public int Id { get; set; }
+        public string Nome { get; set; }
     }
 }
