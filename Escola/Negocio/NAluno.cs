@@ -49,11 +49,5 @@ namespace Negocio
             alunos = p.Abrir();
             return alunos.Where(x => x.TurmaId == a.TurmaId).ToList();
         }
-        public List<Aluno> Displinas(Aluno a)
-        {
-            alunos = p.Abrir();
-            Curso c = alunos.Where(x )
-            return alunos
-        }
     }
 }

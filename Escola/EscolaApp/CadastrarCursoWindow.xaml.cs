@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modelo;
+using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,32 @@ namespace EscolaApp
     /// </summary>
     public partial class CadastrarCursoWindow : Window
     {
+        private NCurso n = new NCurso();
         public CadastrarCursoWindow()
         {
             InitializeComponent();
+        }
+
+        private void Inserir_Click(object sender, RoutedEventArgs e)
+        {
+            Curso c = new Curso();
+            c.Nome = txtCurso.Text;
+            n.Inserir(c);
+        }
+
+        private void Listar_Click(object sender, RoutedEventArgs e)
+        {
+            grid.ItemsSource = n.Listar();
+        }
+
+        private void Atualizar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Excluir_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
