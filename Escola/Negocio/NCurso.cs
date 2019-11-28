@@ -10,17 +10,16 @@ namespace Negocio
     {
         private List<Curso> cursos;
         private PCurso p = new PCurso();
-        public List<Curso> Select()
+        public List<Curso> Listar()
         {
-            PCurso p = new PCurso();
             return p.Abrir();
         }
-        public List<Curso> Select(string s)
+        public List<Curso> Listar(string s)
         {
             cursos = p.Abrir();
             return cursos.Where(x => x.Nome.StartsWith(s)).ToList();
         }
-        public void Insert(Curso c)
+        public void Inserir(Curso c)
         {
             cursos = p.Abrir();
             int id = 1;
@@ -29,7 +28,7 @@ namespace Negocio
             cursos.Add(c);
             p.Salvar(cursos);
         }
-        public void Update(Curso c)
+        public void Atualizar(Curso c)
         {
             cursos = p.Abrir();
             Curso r = cursos.Where(x => x.Id == c.Id).Single();
@@ -37,7 +36,7 @@ namespace Negocio
             cursos.Add(c);
             p.Salvar(cursos);
         }
-        public void Delete(Curso c)
+        public void Excluir(Curso c)
         {
             cursos = p.Abrir();
             Curso r = cursos.Where(x => x.Id == c.Id).Single();
