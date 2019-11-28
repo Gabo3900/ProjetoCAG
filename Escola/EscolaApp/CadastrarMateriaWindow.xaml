@@ -5,17 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EscolaApp"
         mc:Ignorable="d"
-        Title="CadastrarMateriaWindow" Height="250" Width="312.666">
+        Title="CadastrarMateriaWindow" Height="250" Width="356.083">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Matéria" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,59,0,0" TextWrapping="Wrap" Text="Carga horária" VerticalAlignment="Top" Width="75"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <Button Content="Inserir" HorizontalAlignment="Left" Margin="139,31,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Listar" HorizontalAlignment="Left" Margin="219,31,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="139,83,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Excluir" HorizontalAlignment="Left" Margin="219,83,0,0" VerticalAlignment="Top" Width="75"/>
-        <ListBox HorizontalAlignment="Left" Height="93" Margin="10,116,0,0" VerticalAlignment="Top" Width="284"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Matéria" VerticalAlignment="Top"/>
+        <TextBox Name="txtMateria" HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Carga horária" VerticalAlignment="Top" Width="75" Grid.Column="2"/>
+        <TextBox Name="txtCarga" HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" TextChanged="TextBox_TextChanged" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button Content="Inserir" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Grid.Row="2" Click="Inserir_Click"/>
+        <Button Content="Listar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Grid.Column="1" Grid.Row="2" Click="Listar_Click"/>
+        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Grid.Column="2" Grid.Row="2" Click="Atualizar_Click"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Grid.Column="3" Grid.Row="2" Click="Excluir_Click"/>
+        <DataGrid Name="grid" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="90" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="328"/>
     </Grid>
 </Window>

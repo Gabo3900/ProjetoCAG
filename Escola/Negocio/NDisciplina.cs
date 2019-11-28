@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Negocio
 {
-    class NDisciplina
+    public class NDisciplina
     {
         private List<Disciplina> discs;
         private PDisciplina p;

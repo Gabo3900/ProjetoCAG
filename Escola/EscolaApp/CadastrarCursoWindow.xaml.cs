@@ -41,12 +41,21 @@ namespace EscolaApp
 
         private void Atualizar_Click(object sender, RoutedEventArgs e)
         {
-
+            Curso a = grid.SelectedItem as Curso;
+            if(a != null)
+            {
+                a.Nome = txtCurso.Text;
+                n.Atualizar(a);
+            }
         }
 
         private void Excluir_Click(object sender, RoutedEventArgs e)
         {
-
+            Curso a = grid.SelectedItem as Curso;
+            if (a != null)
+            {
+                n.Excluir(a);
+            }
         }
     }
 }
