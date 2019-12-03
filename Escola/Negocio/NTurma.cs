@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Negocio
 {
-    class NTurma
+    public class NTurma
     {
         private List<Turma> turmas;
         private PTurma p;

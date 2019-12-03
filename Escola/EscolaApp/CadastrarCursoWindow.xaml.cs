@@ -32,6 +32,7 @@ namespace EscolaApp
             Curso c = new Curso();
             c.Nome = txtCurso.Text;
             n.Inserir(c);
+            grid.ItemsSource = n.Listar();
         }
 
         private void Listar_Click(object sender, RoutedEventArgs e)
@@ -47,6 +48,7 @@ namespace EscolaApp
                 a.Nome = txtCurso.Text;
                 n.Atualizar(a);
             }
+            grid.ItemsSource = n.Listar();
         }
 
         private void Excluir_Click(object sender, RoutedEventArgs e)
@@ -56,6 +58,7 @@ namespace EscolaApp
             {
                 n.Excluir(a);
             }
+            grid.ItemsSource = n.Listar();
         }
     }
 }
