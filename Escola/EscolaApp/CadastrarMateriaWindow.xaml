@@ -27,6 +27,6 @@
         <Button Content="Listar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Grid.Column="1" Grid.Row="2" Click="Listar_Click"/>
         <Button Content="Atualizar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Grid.Column="2" Grid.Row="2" Click="Atualizar_Click"/>
         <Button Content="Excluir" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="67" Grid.Column="3" Grid.Row="2" Click="Excluir_Click"/>
-        <DataGrid Name="grid" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="90" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="328"/>
+        <DataGrid Name="grid" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="90" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="328" SelectionChanged="Grid_SelectionChanged"/>
     </Grid>
 </Window>

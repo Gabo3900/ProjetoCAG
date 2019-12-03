@@ -33,6 +33,7 @@ namespace EscolaApp
             d.Nome = txtMateria.Text;
             d.CargaHoraria = txtCarga.Text;
             n.Inserir(d);
+            grid.ItemsSource = n.Listar();
         }
 
         private void Listar_Click(object sender, RoutedEventArgs e)
@@ -49,6 +50,8 @@ namespace EscolaApp
                 d.CargaHoraria = txtCarga.Text;
                 n.Atualizar(d);
             }
+            else MessageBox.Show("Nenhum item foi selecionado!");
+            grid.ItemsSource = n.Listar();
         }
 
         private void Excluir_Click(object sender, RoutedEventArgs e)
@@ -57,6 +60,18 @@ namespace EscolaApp
             if (d != null)
             {
                 n.Excluir(d);
+            }
+            else MessageBox.Show("Nenhum item foi selecionado!");
+            grid.ItemsSource = n.Listar();
+        }
+
+        private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Disciplina d = grid.SelectedItem as Disciplina;
+            if (d != null)
+            {
+                txtMateria.Text = d.Nome;
+                txtCarga.Text = d.CargaHoraria;
             }
         }
     }

@@ -48,6 +48,7 @@ namespace EscolaApp
                 a.Nome = txtCurso.Text;
                 n.Atualizar(a);
             }
+            else MessageBox.Show("Nenhum item foi selecionado!");
             grid.ItemsSource = n.Listar();
         }
 
@@ -58,13 +59,17 @@ namespace EscolaApp
             {
                 n.Excluir(a);
             }
+            else MessageBox.Show("Nenhum item foi selecionado!");
             grid.ItemsSource = n.Listar();
         }
 
         private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Curso c = grid.SelectedItem as Curso;
-            txtCurso.Text = c.Nome;
+            if (c != null)
+            {
+                txtCurso.Text = c.Nome;
+            }
         }
     }
 }
