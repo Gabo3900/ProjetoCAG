@@ -38,7 +38,7 @@ namespace EscolaApp
             else if(nome == "Aluno" && senha == "321")
             {
                 AlunoWindow w = new AlunoWindow();
-                w.Show();
+                w.ShowDialog();
                 this.Close();
             }
         }

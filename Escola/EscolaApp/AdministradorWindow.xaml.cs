@@ -27,25 +27,25 @@ namespace EscolaApp
         private void Curso_Click(object sender, RoutedEventArgs e)
         {
             CadastrarCursoWindow w = new CadastrarCursoWindow();
-            w.Show();
+            w.ShowDialog();
         }
 
         private void Turma_Click(object sender, RoutedEventArgs e)
         {
             CadastrarTurmaWindow w = new CadastrarTurmaWindow();
-            w.Show();
+            w.ShowDialog();
         }
 
         private void Aluno_Click(object sender, RoutedEventArgs e)
         {
             CadastrarAlunoWindow w = new CadastrarAlunoWindow();
-            w.Show();
+            w.ShowDialog();
         }
 
         private void Materia_Click(object sender, RoutedEventArgs e)
         {
             CadastrarMateriaWindow w = new CadastrarMateriaWindow();
-            w.Show();
+            w.ShowDialog();
         }
 
         private void Exit(object sender, EventArgs e)

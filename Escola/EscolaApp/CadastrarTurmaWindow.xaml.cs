@@ -19,9 +19,17 @@ namespace EscolaApp
     /// </summary>
     public partial class CadastrarTurmaWindow : Window
     {
+        NTurma n = new NTurma(); 
         public CadastrarTurmaWindow()
         {
             InitializeComponent();
+        }
+
+        private void Inserir_Click(object sender, RoutedEventArgs e)
+        {
+            Turma c = new Turma();
+            c.Nome = txtTurma.Text;
+            n.Inserir(c);
         }
     }
 }
