@@ -10,7 +10,7 @@ namespace Negocio
     public class NTurma
     {
         private List<Turma> turmas;
-        private PTurma p;
+        private PTurma p = new PTurma();
         public List<Turma> Listar()
         {
             return p.Abrir();

@@ -13,7 +13,7 @@
         <Button Content="Listar" HorizontalAlignment="Left" Margin="90,59,0,0" VerticalAlignment="Top" Width="75" Click="Listar_Click"/>
         <Button Content="Atualizar" HorizontalAlignment="Left" Margin="170,59,0,0" VerticalAlignment="Top" Width="75" Click="Atualizar_Click"/>
         <Button Content="Excluir" HorizontalAlignment="Left" Margin="250,59,0,0" VerticalAlignment="Top" Width="75" Click="Excluir_Click"/>
-        <DataGrid Name="grid" HorizontalAlignment="Left" Height="100" Margin="10,94,0,0" VerticalAlignment="Top" Width="315"/>
+        <DataGrid Name="grid" HorizontalAlignment="Left" Height="100" Margin="10,94,0,0" VerticalAlignment="Top" Width="315" SelectionChanged="Grid_SelectionChanged"/>
 
     </Grid>
 </Window>

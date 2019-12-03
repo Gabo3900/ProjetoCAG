@@ -48,15 +48,11 @@ namespace EscolaApp
             w.ShowDialog();
         }
 
-        private void Exit(object sender, EventArgs e)
+        private void Sair_Click(object sender, RoutedEventArgs e)
         {
             MainWindow w = new MainWindow();
             w.Show();
-        }
-
-        private void Sair_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
+            Close();
         }
     }
 }

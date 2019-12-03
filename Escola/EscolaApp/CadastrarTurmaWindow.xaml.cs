@@ -45,21 +45,22 @@ namespace EscolaApp
 
         private void Atualizar_Click(object sender, RoutedEventArgs e)
         {
-            Turma a = grid.SelectedItem as Turma;
-            if (a != null)
+            Turma t = grid.SelectedItem as Turma;
+            if (t != null)
             {
-                a.Codigo = txtTurma.Text;
-                n.Atualizar(a);
+                t.Codigo = txtTurma.Text;
+                t.CursoId = (box.SelectedItem as Curso).Id;
+                n.Atualizar(t);
             }
             grid.ItemsSource = n.Listar();
         }
 
         private void Excluir_Click(object sender, RoutedEventArgs e)
         {
-            Turma a = grid.SelectedItem as Turma;
-            if (a != null)
+            Turma t = grid.SelectedItem as Turma;
+            if (t != null)
             {
-                n.Excluir(a);
+                n.Excluir(t);
             }
             grid.ItemsSource = n.Listar();
         }

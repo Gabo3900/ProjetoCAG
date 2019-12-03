@@ -60,5 +60,11 @@ namespace EscolaApp
             }
             grid.ItemsSource = n.Listar();
         }
+
+        private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Curso c = grid.SelectedItem as Curso;
+            txtCurso.Text = c.Nome;
+        }
     }
 }
