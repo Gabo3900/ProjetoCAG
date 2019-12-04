@@ -42,12 +42,12 @@ namespace EscolaApp
                 n.Inserir(mc);
             }
             else { MessageBox.Show("Nenhum item foi selecionado"); }
-            grid.ItemsSource = n.Listar();
+            Listar();
         }
 
         private void Listar_Click(object sender, RoutedEventArgs e)
         {
-            grid.ItemsSource = n.Listar();
+            Listar();
         }
 
         private void Atualizar_Click(object sender, RoutedEventArgs e)
@@ -63,7 +63,7 @@ namespace EscolaApp
                 n.Atualizar(mc);
             }
             else { MessageBox.Show("Nenhum item foi selecionado"); }
-            grid.ItemsSource = n.Listar();
+            Listar();
         }
 
         private void Excluir_Click(object sender, RoutedEventArgs e)
@@ -74,6 +74,11 @@ namespace EscolaApp
                 n.Excluir(mc);
             }
             else MessageBox.Show("Nenhum item foi selecionado!");
+            Listar();
+        }
+
+        private void Listar()
+        {
             grid.ItemsSource = n.Listar();
         }
     }
