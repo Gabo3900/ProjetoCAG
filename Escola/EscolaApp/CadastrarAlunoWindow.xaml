@@ -9,20 +9,20 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Aluno" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="170,10,0,0" TextWrapping="Wrap" Text="Senha" VerticalAlignment="Top"/>
-        <TextBox Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
+        <TextBox Name="txtAluno" HorizontalAlignment="Left" Height="23" Margin="10,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="155"/>
         <PasswordBox Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="170,31,0,0" VerticalAlignment="Top" Width="108"/>
-        <ListBox Name="list" HorizontalAlignment="Left" Height="120" Margin="13,147,0,0" VerticalAlignment="Top" Width="240"/>
-        <Button Content="Inserir" HorizontalAlignment="Left" Margin="13,122,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Listar" HorizontalAlignment="Left" Margin="333,122,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Foto" HorizontalAlignment="Left" Margin="93,122,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="173,122,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Excluir" HorizontalAlignment="Left" Margin="253,122,0,0" VerticalAlignment="Top" Width="75"/>
-        <ListBox HorizontalAlignment="Left" Height="120" Margin="277,147,0,0" VerticalAlignment="Top" Width="111"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="287,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Inserir" HorizontalAlignment="Left" Margin="13,122,0,0" VerticalAlignment="Top" Width="75" Click="Inserir_Click"/>
+        <Button Content="Listar" HorizontalAlignment="Left" Margin="333,122,0,0" VerticalAlignment="Top" Width="75" Click="Listar_Click"/>
+        <Button Content="Foto" HorizontalAlignment="Left" Margin="93,122,0,0" VerticalAlignment="Top" Width="75" Click="Foto_Click"/>
+        <Button Content="Atualizar" HorizontalAlignment="Left" Margin="173,122,0,0" VerticalAlignment="Top" Width="75" Click="Atualizar_Click"/>
+        <Button Content="Excluir" HorizontalAlignment="Left" Margin="253,122,0,0" VerticalAlignment="Top" Width="75" Click="Excluir_Click"/>
+        <TextBox Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="287,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="287,10,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Matricula" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtMatricula" HorizontalAlignment="Left" Height="23" Margin="10,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="135,72,0,0" TextWrapping="Wrap" Text="Cpf" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="135,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="135,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Image Name="image" HorizontalAlignment="Left" Height="110" Margin="287,157,0,0" VerticalAlignment="Top" Width="120"/>
+        <DataGrid Name="grid" HorizontalAlignment="Left" Height="113" Margin="13,157,0,0" VerticalAlignment="Top" Width="251"/>
     </Grid>
 </Window>

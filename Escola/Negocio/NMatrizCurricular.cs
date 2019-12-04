@@ -9,7 +9,7 @@ namespace Negocio
 {
     public class NMatrizCurricular
     {
-        private List<MatrizCurricular> discs;
+        private List<MatrizCurricular> matriz;
         private PMatrizCurricular p = new PMatrizCurricular();
         public List<MatrizCurricular> Listar()
         {
@@ -17,27 +17,27 @@ namespace Negocio
         }
         public void Inserir(MatrizCurricular d)
         {
-            discs = p.Abrir();
+            matriz = p.Abrir();
             int id = 1;
-            if (discs.Count > 0) id = discs.Max(x => x.Id) + 1;
+            if (matriz.Count > 0) id = matriz.Max(x => x.Id) + 1;
             d.Id = id;
-            discs.Add(d);
-            p.Salvar(discs);
+            matriz.Add(d);
+            p.Salvar(matriz);
         }
         public void Atualizar(MatrizCurricular d)
         {
-            discs = p.Abrir();
-            MatrizCurricular r = discs.Where(x => x.Id == d.Id).Single();
-            discs.Remove(r);
-            discs.Add(d);
-            p.Salvar(discs);
+            matriz = p.Abrir();
+            MatrizCurricular r = matriz.Where(x => x.Id == d.Id).Single();
+            matriz.Remove(r);
+            matriz.Add(d);
+            p.Salvar(matriz);
         }
         public void Excluir(MatrizCurricular d)
         {
-            discs = p.Abrir();
-            MatrizCurricular r = discs.Where(x => x.Id == d.Id).Single();
-            discs.Remove(r);
-            p.Salvar(discs);
+            matriz = p.Abrir();
+            MatrizCurricular r = matriz.Where(x => x.Id == d.Id).Single();
+            matriz.Remove(r);
+            p.Salvar(matriz);
         }
     }
 }

@@ -7,10 +7,10 @@ using System.Text;
 
 namespace Negocio
 {
-    class NAluno
+    public class NAluno
     {
         private List<Aluno> alunos;
-        private PAluno p;
+        private PAluno p = new PAluno();
         public List<Aluno> Listar()
         {
             return p.Abrir();

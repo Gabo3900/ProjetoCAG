@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using Modelo;
+using Negocio;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +23,73 @@ namespace EscolaApp
     /// </summary>
     public partial class CadastrarAlunoWindow : Window
     {
+        NAluno n = new NAluno();
+        private string foto = "";
         public CadastrarAlunoWindow()
         {
             InitializeComponent();
+        }
+
+        private void Foto_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog w = new OpenFileDialog();
+            w.Filter = "Arquivos Jpg|*.jpg";
+            if (w.ShowDialog().Value)
+            {
+                byte[] b = File.ReadAllBytes(w.FileName);
+                foto = Convert.ToBase64String(b);
+
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(b);
+                bi.EndInit();
+
+                image.Source = bi;
+            }
+        }
+
+        private void Listar_Click(object sender, RoutedEventArgs e)
+        {
+            grid.ItemsSource = n.Listar();
+        }
+
+        private void Inserir_Click(object sender, RoutedEventArgs e)
+        {
+            Aluno a = new Aluno();
+            a.Nome = txtAluno.Text;
+            a.Senha = txtSenha.Password;
+            a.Email = txtEmail.Text;
+            a.Foto = foto;
+            a.Matricula = txtMatricula.Text;
+            a.Cpf = txtCpf.Text;
+            n.Inserir(a);
+            grid.ItemsSource = n.Listar();
+        }
+
+        private void Atualizar_Click(object sender, RoutedEventArgs e)
+        {
+            Aluno a = grid.SelectedItem as Aluno;
+            if (a != null)
+            {
+                a.Nome = txtAluno.Text;
+                a.Senha = txtSenha.Password;
+                a.Email = txtEmail.Text;
+                a.Foto = foto;
+                a.Matricula = txtMatricula.Text;
+                a.Cpf = txtCpf.Text;
+                n.Atualizar(a);
+            }
+            grid.ItemsSource = n.Listar();
+        }
+
+        private void Excluir_Click(object sender, RoutedEventArgs e)
+        {
+            Aluno a = grid.SelectedItem as Aluno;
+            if (a != null)
+            {
+                n.Excluir(a);
+            }
+            grid.ItemsSource = n.Listar();
         }
     }
 }
