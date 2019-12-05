@@ -45,7 +45,7 @@ namespace EscolaApp
                     if (nome == a.Nome && senha == a.Senha)
                     {
                         AlunoWindow w = new AlunoWindow(a);
-                        w.ShowDialog();
+                        w.Show();
                         Close();
                     }
                 }

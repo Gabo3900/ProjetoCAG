@@ -1,4 +1,5 @@
 ﻿using Modelo;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,15 +28,22 @@ namespace EscolaApp
             aluno = a;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Perfil_Button(object sender, RoutedEventArgs e)
         {
             PerfilWindow w = new PerfilWindow(aluno);
             w.Show();
+        }
+
+        private void ListarAluno_Click(object sender, RoutedEventArgs e)
+        {
+            grid.ItemsSource = (new NAluno()).ColegasDeClasse(aluno);
+        }
+
+        private void Sair_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow w = new MainWindow();
+            w.Show();
+            Close();
         }
     }
 }
