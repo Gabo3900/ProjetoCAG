@@ -28,6 +28,8 @@ namespace EscolaApp
         public CadastrarAlunoWindow()
         {
             InitializeComponent();
+            NTurma t = new NTurma();
+            box.ItemsSource = t.Listar();
         }
 
         private void Foto_Click(object sender, RoutedEventArgs e)
@@ -62,6 +64,7 @@ namespace EscolaApp
             a.Foto = foto;
             a.Matricula = txtMatricula.Text;
             a.Cpf = txtCpf.Text;
+            a.TurmaId = (box.SelectedItem as Turma).Id;
             n.Inserir(a);
             grid.ItemsSource = n.Listar();
         }
@@ -77,6 +80,7 @@ namespace EscolaApp
                 a.Foto = foto;
                 a.Matricula = txtMatricula.Text;
                 a.Cpf = txtCpf.Text;
+                a.TurmaId = (box.SelectedItem as Turma).Id;
                 n.Atualizar(a);
             }
             grid.ItemsSource = n.Listar();

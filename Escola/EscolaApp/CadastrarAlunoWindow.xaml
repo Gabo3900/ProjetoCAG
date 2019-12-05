@@ -20,9 +20,11 @@
         <TextBlock HorizontalAlignment="Left" Margin="287,10,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Matricula" VerticalAlignment="Top"/>
         <TextBox Name="txtMatricula" HorizontalAlignment="Left" Height="23" Margin="10,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="135,72,0,0" TextWrapping="Wrap" Text="Cpf" VerticalAlignment="Top"/>
-        <TextBox Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="135,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="147,72,0,0" TextWrapping="Wrap" Text="Cpf" VerticalAlignment="Top"/>
+        <TextBox Name="txtCpf" HorizontalAlignment="Left" Height="23" Margin="144,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Image Name="image" HorizontalAlignment="Left" Height="110" Margin="287,157,0,0" VerticalAlignment="Top" Width="120"/>
         <DataGrid Name="grid" HorizontalAlignment="Left" Height="113" Margin="13,157,0,0" VerticalAlignment="Top" Width="251"/>
+        <ComboBox Name="box" HorizontalAlignment="Left" Margin="287,93,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="287,72,0,0" TextWrapping="Wrap" Text="Turma" VerticalAlignment="Top"/>
     </Grid>
 </Window>

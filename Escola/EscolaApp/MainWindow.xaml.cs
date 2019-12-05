@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modelo;
+using Negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,17 +31,24 @@ namespace EscolaApp
         {
             string nome = txtUsuario.Text;
             string senha = txtSenha.Password;
-            if(nome == "Admin" && senha == "123")
+            if (nome == "Admin" && senha == "123")
             {
                 AdministradorWindow w = new AdministradorWindow();
                 w.Show();
-                this.Close();
+                Close();
             }
-            else if(nome == "Aluno" && senha == "321")
+            else
             {
-                AlunoWindow w = new AlunoWindow();
-                w.ShowDialog();
-                this.Close();
+                NAluno n = new NAluno();
+                foreach (Aluno a in n.Listar())
+                {
+                    if (nome == a.Nome && senha == a.Senha)
+                    {
+                        AlunoWindow w = new AlunoWindow(a);
+                        w.ShowDialog();
+                        Close();
+                    }
+                }
             }
         }
     }

@@ -12,7 +12,7 @@ namespace Modelo
         public string Matricula { get; set; }
         public string Cpf { get; set; }
         public string Foto { get; set; }
-        public string TurmaId { get; set; }
+        public int TurmaId { get; set; }
         public string Senha { get; set; }
     }
 }

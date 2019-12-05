@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace EscolaApp
     /// </summary>
     public partial class AlunoWindow : Window
     {
-        public AlunoWindow()
+        private Aluno aluno;   
+        public AlunoWindow(Aluno a)
         {
             InitializeComponent();
+            aluno = a;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -31,7 +34,7 @@ namespace EscolaApp
 
         private void Perfil_Button(object sender, RoutedEventArgs e)
         {
-            PerfilWindow w = new PerfilWindow();
+            PerfilWindow w = new PerfilWindow(aluno);
             w.Show();
         }
     }
