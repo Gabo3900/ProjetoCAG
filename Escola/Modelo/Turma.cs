@@ -9,5 +9,9 @@ namespace Modelo
         public int Id { get; set; }
         public string Codigo { get; set; }
         public int CursoId { get; set; }
+        public override string ToString()
+        {
+            return Codigo;
+        }
     }
 }

@@ -106,6 +106,7 @@ namespace EscolaApp
                 txtEmail.Text = a.Email;
                 txtMatricula.Text = a.Matricula;
                 txtCpf.Text = a.Cpf;
+                NTurma n = new NTurma();
                 byte[] b = Convert.FromBase64String(a.Foto);
                 BitmapImage bi = new BitmapImage();
                 bi.BeginInit();
