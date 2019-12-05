@@ -36,7 +36,7 @@ namespace EscolaApp
 
         private void ListarAluno_Click(object sender, RoutedEventArgs e)
         {
-            grid.ItemsSource = (new NAluno()).ColegasDeClasse(aluno);
+            list.ItemsSource = (new NAluno()).ColegasDeClasse(aluno);
         }
 
         private void Sair_Click(object sender, RoutedEventArgs e)

@@ -10,6 +10,6 @@
         <Button Content="Visualizar perfil" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="146"  Click="Perfil_Button"/>
         <Button Content="Listar Alunos de Turma" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="146" Click="ListarAluno_Click"/>
         <Button Content="Sair" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="76" Click="Sair_Click"/>
-        <DataGrid Name="grid" HorizontalAlignment="Left" Height="149" Margin="184,10,0,0" VerticalAlignment="Top" Width="180"/>
+        <ListBox Name="list" HorizontalAlignment="Left" Height="149" Margin="173,10,0,0" VerticalAlignment="Top" Width="191"/>
     </Grid>
 </Window>

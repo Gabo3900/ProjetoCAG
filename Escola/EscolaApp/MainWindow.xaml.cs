@@ -31,25 +31,26 @@ namespace EscolaApp
         {
             string nome = txtUsuario.Text;
             string senha = txtSenha.Password;
+            bool logou = false;
             if (nome == "Admin" && senha == "123")
             {
+                logou = true;
                 AdministradorWindow w = new AdministradorWindow();
                 w.Show();
                 Close();
             }
-            else
+            NAluno n = new NAluno();
+            foreach (Aluno a in n.Listar())
             {
-                NAluno n = new NAluno();
-                foreach (Aluno a in n.Listar())
+                if (nome == a.Nome && senha == a.Senha)
                 {
-                    if (nome == a.Nome && senha == a.Senha)
-                    {
-                        AlunoWindow w = new AlunoWindow(a);
-                        w.Show();
-                        Close();
-                    }
+                    logou = true;
+                    AlunoWindow w = new AlunoWindow(a);
+                    w.Show();
+                    Close();
                 }
             }
+            if (!logou) MessageBox.Show("Senha ou usuário inválido");
         }
     }
 }

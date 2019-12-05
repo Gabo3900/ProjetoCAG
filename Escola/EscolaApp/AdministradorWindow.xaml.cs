@@ -58,8 +58,7 @@ namespace EscolaApp
         private void Matriz_Click(object sender, RoutedEventArgs e)
         {
             CadastrarMatrizWindow w = new CadastrarMatrizWindow();
-            w.Show();
-            Close();
+            w.ShowDialog();
         }
     }
 }

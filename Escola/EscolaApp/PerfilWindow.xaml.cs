@@ -55,7 +55,7 @@ namespace EscolaApp
 
         private void Senha_Click(object sender, RoutedEventArgs e)
         {
-            InputBox box = new InputBox(txtEmail.Text);
+            InputBox box = new InputBox("");
             if (box.ShowDialog().Value)
             {
                 aluno.Senha = box.Input;

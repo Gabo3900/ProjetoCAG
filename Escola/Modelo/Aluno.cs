@@ -14,5 +14,9 @@ namespace Modelo
         public string Foto { get; set; }
         public int TurmaId { get; set; }
         public string Senha { get; set; }
+        public override string ToString()
+        {
+            return $"{Nome} - {Email} - {Matricula}";
+        }
     }
 }
