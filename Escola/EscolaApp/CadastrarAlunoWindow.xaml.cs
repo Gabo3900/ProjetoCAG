@@ -95,5 +95,24 @@ namespace EscolaApp
             }
             grid.ItemsSource = n.Listar();
         }
+
+        private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (grid.SelectedItem != null)
+            {
+                Aluno a = grid.SelectedItem as Aluno;
+                txtAluno.Text = a.Nome;
+                txtSenha.Password = a.Senha;
+                txtEmail.Text = a.Email;
+                txtMatricula.Text = a.Matricula;
+                txtCpf.Text = a.Cpf;
+                byte[] b = Convert.FromBase64String(a.Foto);
+                BitmapImage bi = new BitmapImage();
+                bi.BeginInit();
+                bi.StreamSource = new MemoryStream(b);
+                bi.EndInit();
+                image.Source = bi;
+            }
+        }
     }
 }

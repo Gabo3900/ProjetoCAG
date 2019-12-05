@@ -67,9 +67,9 @@ namespace EscolaApp
 
         private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Disciplina d = grid.SelectedItem as Disciplina;
-            if (d != null)
+            if (grid.SelectedItem != null)
             {
+                Disciplina d = grid.SelectedItem as Disciplina;
                 txtMateria.Text = d.Nome;
                 txtCarga.Text = d.CargaHoraria;
             }

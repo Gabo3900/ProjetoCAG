@@ -65,9 +65,9 @@ namespace EscolaApp
 
         private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Curso c = grid.SelectedItem as Curso;
-            if (c != null)
+            if (grid.SelectedItem != null)
             {
+                Curso c = grid.SelectedItem as Curso;
                 txtCurso.Text = c.Nome;
             }
         }
