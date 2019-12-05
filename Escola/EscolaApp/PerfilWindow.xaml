@@ -16,7 +16,9 @@
         <TextBox Name="txtCpf"  HorizontalAlignment="Left" Height="23" Margin="181,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <TextBox Name="txtMatricula" HorizontalAlignment="Left" Height="23" Margin="181,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <TextBox Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="181,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Button Content="Editar" HorizontalAlignment="Left" Margin="128,136,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Atualizar Email" HorizontalAlignment="Left" Margin="115,136,0,0" VerticalAlignment="Top" Width="84" Click="Editar_Click"/>
+        <Button Content="Atualizar foto" HorizontalAlignment="Left" Margin="18,136,0,0" VerticalAlignment="Top" Width="78" Click="Foto_Click"/>
+        <Button Content="Mudar Senha" HorizontalAlignment="Left" Margin="226,136,0,0" VerticalAlignment="Top" Width="75" Click="Senha_Click"/>
 
     </Grid>
 </Window>
