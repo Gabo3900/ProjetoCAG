@@ -57,15 +57,23 @@ namespace EscolaApp
 
         private void Inserir_Click(object sender, RoutedEventArgs e)
         {
-            Aluno a = new Aluno();
-            a.Nome = txtAluno.Text;
-            a.Senha = txtSenha.Password;
-            a.Email = txtEmail.Text;
-            a.Foto = foto;
-            a.Matricula = txtMatricula.Text;
-            a.Cpf = txtCpf.Text;
-            a.TurmaId = (box.SelectedItem as Turma).Id;
-            n.Inserir(a);
+            
+            if(foto != "")
+            { 
+                Aluno a = new Aluno();
+                a.Nome = txtAluno.Text;
+                a.Senha = txtSenha.Password;
+                a.Email = txtEmail.Text;
+                a.Matricula = txtMatricula.Text;
+                a.Cpf = txtCpf.Text;
+                a.TurmaId = (box.SelectedItem as Turma).Id;
+                a.Foto = foto;
+                n.Inserir(a);
+            } 
+            else
+            {
+                MessageBox.Show("Não há foto cadastrada");
+            }
             grid.ItemsSource = n.Listar();
         }
 
@@ -106,13 +114,15 @@ namespace EscolaApp
                 txtEmail.Text = a.Email;
                 txtMatricula.Text = a.Matricula;
                 txtCpf.Text = a.Cpf;
-                NTurma n = new NTurma();
-                byte[] b = Convert.FromBase64String(a.Foto);
-                BitmapImage bi = new BitmapImage();
-                bi.BeginInit();
-                bi.StreamSource = new MemoryStream(b);
-                bi.EndInit();
-                image.Source = bi;
+                if (a.Foto != "")
+                {
+                    byte[] b = Convert.FromBase64String(a.Foto);
+                    BitmapImage bi = new BitmapImage();
+                    bi.BeginInit();
+                    bi.StreamSource = new MemoryStream(b);
+                    bi.EndInit();
+                    image.Source = bi;
+                }
             }
         }
     }
