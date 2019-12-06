@@ -15,6 +15,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
 
 namespace EscolaApp
 {
@@ -62,7 +63,7 @@ namespace EscolaApp
             { 
                 Aluno a = new Aluno();
                 a.Nome = txtAluno.Text;
-                a.Senha = txtSenha.Password;
+                a.Senha = Criptografia.Criptografar(txtSenha.Password);
                 a.Email = txtEmail.Text;
                 a.Matricula = txtMatricula.Text;
                 a.Cpf = txtCpf.Text;
@@ -79,11 +80,11 @@ namespace EscolaApp
 
         private void Atualizar_Click(object sender, RoutedEventArgs e)
         {
-            Aluno a = grid.SelectedItem as Aluno;
-            if (a != null)
+            if (grid.SelectedItem != null)
             {
+                Aluno a = grid.SelectedItem as Aluno;
                 a.Nome = txtAluno.Text;
-                a.Senha = txtSenha.Password;
+                a.Senha = Criptografia.Criptografar(txtSenha.Password);
                 a.Email = txtEmail.Text;
                 a.Foto = foto;
                 a.Matricula = txtMatricula.Text;
@@ -110,10 +111,10 @@ namespace EscolaApp
             {
                 Aluno a = grid.SelectedItem as Aluno;
                 txtAluno.Text = a.Nome;
-                txtSenha.Password = a.Senha;
                 txtEmail.Text = a.Email;
                 txtMatricula.Text = a.Matricula;
                 txtCpf.Text = a.Cpf;
+                txtSenha.Password = Criptografia.Descriptografar(a.Senha);
                 if (a.Foto != "")
                 {
                     byte[] b = Convert.FromBase64String(a.Foto);

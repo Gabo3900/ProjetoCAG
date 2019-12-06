@@ -42,7 +42,7 @@ namespace EscolaApp
             NAluno n = new NAluno();
             foreach (Aluno a in n.Listar())
             {
-                if (nome == a.Nome && senha == a.Senha)
+                if (nome == a.Nome && senha == Criptografia.Descriptografar(a.Senha))
                 {
                     logou = true;
                     AlunoWindow w = new AlunoWindow(a);
